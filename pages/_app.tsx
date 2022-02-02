@@ -2,8 +2,19 @@ import "../styles/tailwind.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
+import { RelayEnvironmentProvider } from "react-relay/hooks";
+import { getInitialPreloadedQuery, getRelayProps } from "relay-nextjs/app";
+import { getClientEnvironment } from "relay/clientEnvironment";
+
+const clientEnv = getClientEnvironment();
+const initialPreloadedQuery = getInitialPreloadedQuery({
+  createClientEnvironment: () => getClientEnvironment()!
+});
 
 export default function App({ Component, pageProps }: AppProps) {
+  const relayProps = getRelayProps(pageProps, initialPreloadedQuery);
+  const env = relayProps.preloadedQuery?.environment ?? clientEnv!;
+
   return (
     <ChakraProvider>
       <DefaultSeo
@@ -14,7 +25,9 @@ export default function App({ Component, pageProps }: AppProps) {
           site: "@_aguilarkevin_"
         }}
       />
-      <Component {...pageProps} />
+      <RelayEnvironmentProvider environment={env}>
+        <Component {...pageProps} {...relayProps} />
+      </RelayEnvironmentProvider>
     </ChakraProvider>
   );
 }
