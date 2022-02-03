@@ -4,6 +4,7 @@ import { DefaultSeo } from "next-seo";
 import { RelayEnvironmentProvider } from "react-relay/hooks";
 import { getInitialPreloadedQuery, getRelayProps } from "relay-nextjs/app";
 import { getClientEnvironment } from "relay/clientEnvironment";
+import SiteLayout from "components/SiteLayout/SiteLayout";
 
 const clientEnv = getClientEnvironment();
 const initialPreloadedQuery = getInitialPreloadedQuery({
@@ -25,7 +26,9 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <RelayEnvironmentProvider environment={env}>
-        <Component {...pageProps} {...relayProps} />
+        <SiteLayout>
+          <Component {...pageProps} {...relayProps} />
+        </SiteLayout>
       </RelayEnvironmentProvider>
     </>
   );
