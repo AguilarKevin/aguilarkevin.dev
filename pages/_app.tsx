@@ -1,11 +1,22 @@
 import "../styles/tailwind.css";
-import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
+import { RelayEnvironmentProvider } from "react-relay/hooks";
+import { getInitialPreloadedQuery, getRelayProps } from "relay-nextjs/app";
+import { getClientEnvironment } from "relay/clientEnvironment";
+import SiteLayout from "components/SiteLayout/SiteLayout";
+
+const clientEnv = getClientEnvironment();
+const initialPreloadedQuery = getInitialPreloadedQuery({
+  createClientEnvironment: () => getClientEnvironment()!
+});
 
 export default function App({ Component, pageProps }: AppProps) {
+  const relayProps = getRelayProps(pageProps, initialPreloadedQuery);
+  const env = relayProps.preloadedQuery?.environment ?? clientEnv!;
+
   return (
-    <ChakraProvider>
+    <>
       <DefaultSeo
         title="AguilarKevin"
         twitter={{
@@ -14,7 +25,11 @@ export default function App({ Component, pageProps }: AppProps) {
           site: "@_aguilarkevin_"
         }}
       />
-      <Component {...pageProps} />
-    </ChakraProvider>
+      <RelayEnvironmentProvider environment={env}>
+        <SiteLayout>
+          <Component {...pageProps} {...relayProps} />
+        </SiteLayout>
+      </RelayEnvironmentProvider>
+    </>
   );
 }

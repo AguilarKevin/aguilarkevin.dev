@@ -1,3 +1,9 @@
-export default function Home() {
-  return <div>hola</div>;
+import Home from "../sections/Home/Home";
+
+export default function HomePage() {
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
