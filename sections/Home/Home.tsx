@@ -4,6 +4,7 @@ import MotionBox from 'components/MotionBox'
 import PageSection from 'components/PageSection'
 import {useViewportScroll} from 'framer-motion'
 import React from 'react'
+import Header from './components/Header/Header'
 
 function Home() {
   const {scrollYProgress} = useViewportScroll()
@@ -13,82 +14,36 @@ function Home() {
   })
   return (
     <>
+      <Header />
       <PageSection textColor="brand.textGray" p={{base: 4, lg: 16}}>
-        <Flex
-          justifyContent="space-between"
-          lineHeight={0.8}
-          textTransform="uppercase"
-          fontSize="xs"
-          letterSpacing="-0.01rem"
-          gridColumnGap={4}
-          pb={12}
-        >
-          <Stack minW="35%">
-            <Text as="span">From</Text>
-            <Text as="span">Nicaragua</Text>
-          </Stack>
-          <Flex
-            justifyContent="space-between"
-            flexDir={{base: 'column', md: 'row'}}
-            flex="1"
-            gridRowGap={6}
-          >
-            <Stack>
-              <Text as="span">fullstack developer</Text>
-              <Text as="span">associated to Nerdify</Text>
-            </Stack>
-
-            <Text as="span">My Blog</Text>
-            <Button
-              variant="outline"
-              borderRadius={18}
-              _hover={{
-                bgColor: 'brand.orange',
-                borderColor: 'brand.orange',
-              }}
-            >
-              <Text
-                as="span"
-                textColor="brand.textGray"
-                textTransform="uppercase"
-                fontSize="sm"
-                fontWeight={300}
-                _hover={{textColor: 'white'}}
-              >
-                Contact
-              </Text>
-            </Button>
-          </Flex>
-        </Flex>
         <Stack
           textTransform="uppercase"
           lineHeight={0.9}
-          letterSpacing={{base: '-0.4em', md: '-0.9em'}}
+          letterSpacing={{base: '-0.4em', md: '-1em'}}
         >
           <Flex
             alignItems="center"
-            gridColumnGap={2}
+            gridColumnGap={8}
             gridRowGap={8}
-            justifyContent="space-between"
             flexWrap="wrap"
           >
             <Flex>
-              {'FULL'.split('').map((letter) => {
+              {'FRONT'.split('').map((letter) => {
                 return <BigText lineHeight={0.9}>{letter}</BigText>
               })}
             </Flex>
             <Box w={{base: '200px', lg: '340px'}} h="4vh" bg="brand.textGray" />
             <Flex>
-              {'STACK'.split('').map((letter) => {
+              {'END'.split('').map((letter) => {
                 return <BigText>{letter}</BigText>
               })}
             </Flex>
           </Flex>
           <Flex
             flexWrap="wrap"
-            gridColumnGap={3}
+            gridColumnGap={8}
             gridRowGap={8}
-            justifyContent="space-between"
+            justifyContent="end"
           >
             <Flex flexWrap="wrap">
               {'DEVELOPER'.split('').map((letter) => {
@@ -98,14 +53,24 @@ function Home() {
             <Box
               as="div"
               letterSpacing="-0.01em"
-              lineHeight={1.3}
-              maxW={{base: 'w-screen', md: '24%'}}
+              lineHeight={1.5}
+              maxW={{base: '65%', md: '24%'}}
               py={6}
             >
-              <Text as="span" textColor="#606060" fontSize="sm" pr="4">
+              <Text
+                as="span"
+                textColor="#606060"
+                fontSize={{base: 'xs', lg: 'sm'}}
+                pr="2"
+              >
                 About
               </Text>{' '}
-              <Text as="span" textTransform="initial" fontSize="xl">
+              <Text
+                as="span"
+                textTransform="initial"
+                fontSize={{base: 'md', lg: 'xl'}}
+                textColor="#BBBBBB"
+              >
                 I consider myself a developer who applies solutions with
                 ingenuity. My focus is to create websites that feel modern and
                 interactive. I love collaborating with brilliant people.
