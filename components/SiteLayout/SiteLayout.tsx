@@ -1,20 +1,20 @@
-import { ReactNode } from "react";
+import {ReactNode} from 'react'
 
-import { Box, ChakraProvider } from "@chakra-ui/react";
-import theme from "../../theme";
+import {Box, ChakraProvider} from '@chakra-ui/react'
+import theme from '../../theme'
 
 interface SiteLayoutProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
-function SiteLayout({ children }: SiteLayoutProps) {
+function SiteLayout({children}: SiteLayoutProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Box as="div" bg="brand.bgGray" minH="h-screen">
+      <Box as="div" bg="brand.bgGray">
         {children}
       </Box>
     </ChakraProvider>
-  );
+  )
 }
 
-export default SiteLayout;
+export default SiteLayout
