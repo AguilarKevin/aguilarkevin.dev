@@ -1,9 +1,9 @@
-import { Box } from "@chakra-ui/react";
+import Home from "../sections/Home/Home";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <Box h="4xl" bg="">
-      home
-    </Box>
+    <>
+      <Home />
+    </>
   );
 }

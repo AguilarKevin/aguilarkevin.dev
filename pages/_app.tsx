@@ -1,5 +1,4 @@
 import "../styles/tailwind.css";
-import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
 import { DefaultSeo } from "next-seo";
 import { RelayEnvironmentProvider } from "react-relay/hooks";
@@ -16,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
   const env = relayProps.preloadedQuery?.environment ?? clientEnv!;
 
   return (
-    <ChakraProvider>
+    <>
       <DefaultSeo
         title="AguilarKevin"
         twitter={{
@@ -28,6 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
       <RelayEnvironmentProvider environment={env}>
         <Component {...pageProps} {...relayProps} />
       </RelayEnvironmentProvider>
-    </ChakraProvider>
+    </>
   );
 }
