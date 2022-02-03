@@ -1,9 +1,9 @@
 const colors = {
   brand: {
     bgGray: `#111111`,
-    textGray: `#626262`,
-    orange: `#CB450C`
-  }
-};
+    textGray: `#787878`,
+    orange: `#CB450C`,
+  },
+}
 
-export default colors;
+export default colors

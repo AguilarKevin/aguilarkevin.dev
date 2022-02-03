@@ -1,0 +1,8 @@
+.next
+.vercel
+package.json
+package-lock.json
+public
+
+__generated__
+generated/graphql.ts
