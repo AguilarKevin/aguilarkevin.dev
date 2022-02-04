@@ -10,7 +10,7 @@ interface SiteLayoutProps {
 function SiteLayout({children}: SiteLayoutProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Box as="div" bg="brand.bgGray" minH="h-screen">
+      <Box as="div" bg="brand.bgGray" minH="h-screen" h="max-content">
         {children}
       </Box>
     </ChakraProvider>

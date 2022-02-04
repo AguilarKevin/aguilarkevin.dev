@@ -5,7 +5,7 @@ export default function Navigation() {
   return (
     <>
       <Flex
-        justifyContent="space-around"
+        justifyContent="space-between"
         lineHeight={0.8}
         textTransform="uppercase"
         fontSize="xs"
@@ -13,6 +13,7 @@ export default function Navigation() {
         textColor="brand.textGray"
         gridColumnGap={4}
         pt={8}
+        px={20}
         pb={12}
       >
         <Stack>
