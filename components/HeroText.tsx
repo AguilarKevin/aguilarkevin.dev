@@ -11,12 +11,20 @@ export default function BigText({text, ...props}: BigTextProps) {
       {text.split('').map((letter) => (
         <Text
           as="span"
-          fontSize={{base: '10rem', sm: '11rem', md: '12rem', lg: '22rem'}}
+          fontSize={{
+            base: '10rem',
+            sm: '10.5rem',
+            md: '11.5rem',
+            lg: '16rem',
+            xl: '20rem',
+            '2xl': '26rem',
+          }}
+          // lineHeight={{base: 0.8, sm: '', md: 0.78, lg: 0.75}}
           key={`letter-${uuidv4()}`}
           textColor="brand.textGray"
           fontFamily="Bebas Neue"
           transition="all 0.2s ease-in-out"
-          _hover={{textColor: '#AAAAAA'}}
+          _hover={{textColor: 'brand.textLightGray'}}
           {...props}
         >
           {letter}

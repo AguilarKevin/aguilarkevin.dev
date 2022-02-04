@@ -5,15 +5,15 @@ export default function Navigation() {
   return (
     <>
       <Flex
-        justifyContent="space-around"
+        justifyContent="space-between"
         lineHeight={0.8}
         textTransform="uppercase"
-        fontSize="xs"
+        fontSize={{md: 'sm'}}
         letterSpacing="-0.01rem"
         textColor="brand.textGray"
         gridColumnGap={4}
         pt={8}
-        pb={12}
+        px={20}
       >
         <Stack>
           <Text as="span">From</Text>
@@ -42,7 +42,7 @@ export default function Navigation() {
             fontWeight={300}
             _hover={{textColor: 'white'}}
           >
-            Contact
+            Get in touch
           </Text>
         </Button>
       </Flex>
