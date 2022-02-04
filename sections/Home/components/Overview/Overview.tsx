@@ -17,6 +17,7 @@ export default function Overview() {
       >
         <Flex
           alignItems={{lg: 'center'}}
+          justifyContent={{lg: 'space-between'}}
           gridColumnGap={{base: 1, lg: 4}}
           gridRowGap={{base: 4, lg: 4}}
           flexDir={{base: 'column', lg: 'row'}}
@@ -26,20 +27,22 @@ export default function Overview() {
           <Box
             w={{base: '200px', md: '220px', lg: '290px'}}
             h={{base: '30px', lg: '50px'}}
+            mb={{base: 3.5, lg: 0}}
             bg="brand.textGray"
           />
           <HeroText text="STACK" />
         </Flex>
         <Flex
-          gridColumnGap={{base: 1, lg: 4}}
+          gridColumnGap={{base: 1, lg: 8}}
           flexDir={{base: 'column', lg: 'row'}}
+          justifyContent={{base: 'unset', md: 'space-between'}}
         >
           <HeroText text="DEVELOPER" />
           <Box
             as="div"
             letterSpacing="-0.01em"
-            lineHeight={1.2}
-            maxW={{base: '70%', sm: '60%', md: '45%', lg: '28%', xl: '20%'}}
+            lineHeight={1.4}
+            maxW={{base: '70%', sm: '60%', md: '42%', lg: '22%', xl: '18%'}}
             alignSelf={{base: 'end', lg: 'start'}}
             py={6}
           >
@@ -54,7 +57,7 @@ export default function Overview() {
             <Text
               as="span"
               textTransform="initial"
-              fontSize={{base: 'md', lg: 'xl'}}
+              fontSize={{base: 'md', lg: 'md'}}
               textColor="#BBBBBB"
             >
               I'm kevin Aguilar, a 20 year old Fullstack developer based in

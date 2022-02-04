@@ -8,7 +8,7 @@ export default function Navigation() {
         justifyContent="space-between"
         lineHeight={0.8}
         textTransform="uppercase"
-        fontSize="xs"
+        fontSize={{md: 'sm'}}
         letterSpacing="-0.01rem"
         textColor="brand.textGray"
         gridColumnGap={4}

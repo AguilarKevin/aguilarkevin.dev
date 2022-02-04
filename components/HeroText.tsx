@@ -17,7 +17,7 @@ export default function BigText({text, ...props}: BigTextProps) {
             md: '11.5rem',
             lg: '16rem',
             xl: '20rem',
-            '2xl': '28rem',
+            '2xl': '26rem',
           }}
           // lineHeight={{base: 0.8, sm: '', md: 0.78, lg: 0.75}}
           key={`letter-${uuidv4()}`}
