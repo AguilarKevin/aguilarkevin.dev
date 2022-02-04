@@ -13,7 +13,6 @@ export default function MobileNavigation() {
         textColor="brand.textGray"
         pt={8}
         px={4}
-        pb={12}
       >
         <Stack>
           <Text as="span">From</Text>
@@ -43,7 +42,7 @@ export default function MobileNavigation() {
               fontWeight={300}
               _hover={{textColor: 'white'}}
             >
-              Contact
+              Get in touch
             </Text>
           </Button>
         </Stack>

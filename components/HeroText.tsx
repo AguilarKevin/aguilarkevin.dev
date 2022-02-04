@@ -24,7 +24,7 @@ export default function BigText({text, ...props}: BigTextProps) {
           textColor="brand.textGray"
           fontFamily="Bebas Neue"
           transition="all 0.2s ease-in-out"
-          _hover={{textColor: '#AAAAAA'}}
+          _hover={{textColor: 'brand.textLightGray'}}
           {...props}
         >
           {letter}

@@ -4,7 +4,13 @@ import PageSection from 'components/PageSection'
 
 export default function Overview() {
   return (
-    <PageSection px={{base: 4, sm: 8, md: 10, lg: 12, xl: 16}}>
+    <PageSection
+      px={{base: 4, sm: 8, md: 10, lg: 12, xl: 16}}
+      minH="h-screen"
+      d="flex"
+      alignItems="center"
+      pt="8"
+    >
       <Stack
         textTransform="uppercase"
         lineHeight={0.8}
@@ -25,8 +31,8 @@ export default function Overview() {
         >
           <HeroText text="FULL" />
           <Box
-            w={{base: '200px', md: '220px', lg: '290px'}}
-            h={{base: '30px', lg: '50px'}}
+            w={{base: '210px', md: '240px', lg: '300px'}}
+            h={{base: '20px', lg: '40px'}}
             mb={{base: 3.5, lg: 0}}
             bg="brand.textGray"
           />
@@ -41,7 +47,7 @@ export default function Overview() {
           <Box
             as="div"
             letterSpacing="-0.01em"
-            lineHeight={1.4}
+            lineHeight={1.6}
             maxW={{base: '70%', sm: '60%', md: '42%', lg: '22%', xl: '18%'}}
             alignSelf={{base: 'end', lg: 'start'}}
             py={6}
@@ -52,21 +58,17 @@ export default function Overview() {
               fontSize={{base: 'xs', lg: 'sm'}}
               pr="2"
             >
-              About
+              Overview
             </Text>{' '}
             <Text
               as="span"
               textTransform="initial"
-              fontSize={{base: 'md', lg: 'md'}}
-              textColor="#BBBBBB"
+              fontSize={{base: 'lg', lg: 'xl'}}
+              textColor="brand.textLightGray"
             >
               I'm kevin Aguilar, a 20 year old Fullstack developer based in
-              Nicaragua.
-              <br />
-              <br />I consider myself a resourceful developer who applies
-              solutions with ingenuity. My focus is to create websites that feel
-              modern and interactive. I love collaborating with brilliant
-              people.
+              Nicaragua focused on building modern and interactive apps and
+              robust services.
             </Text>
           </Box>
         </Flex>

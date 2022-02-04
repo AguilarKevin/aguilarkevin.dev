@@ -14,7 +14,6 @@ export default function Navigation() {
         gridColumnGap={4}
         pt={8}
         px={20}
-        pb={12}
       >
         <Stack>
           <Text as="span">From</Text>
@@ -43,7 +42,7 @@ export default function Navigation() {
             fontWeight={300}
             _hover={{textColor: 'white'}}
           >
-            Contact
+            Get in touch
           </Text>
         </Button>
       </Flex>
