@@ -1,4 +1,5 @@
 import {Button, Flex, Stack, Text} from '@chakra-ui/react'
+import Link from 'next/link'
 
 export default function MobileNavigation() {
   return (
@@ -15,17 +16,28 @@ export default function MobileNavigation() {
         px={4}
       >
         <Stack>
-          <Text as="span">From</Text>
-          <Text as="span">Nicaragua</Text>
+          <Text as="span">fullstack developer</Text>
+          <Text as="span">From Nicaragua</Text>
         </Stack>
 
         <Stack spacing={4}>
-          <Stack>
-            <Text as="span">fullstack developer</Text>
-            <Text as="span">associated to Nerdify</Text>
-          </Stack>
+          <Link href="#">
+            <Text as="span" _hover={{textColor: 'brand.textLightGray'}}>
+              About
+            </Text>
+          </Link>
 
-          <Text as="span">My Blog</Text>
+          <Link href="#">
+            <Text as="span" _hover={{textColor: 'brand.textLightGray'}}>
+              My Blog
+            </Text>
+          </Link>
+
+          <Link href="#">
+            <Text as="span" _hover={{textColor: 'brand.textLightGray'}}>
+              Projects
+            </Text>
+          </Link>
           <Button
             variant="outline"
             borderRadius={18}

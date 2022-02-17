@@ -48,7 +48,7 @@ export default function Overview() {
             as="div"
             letterSpacing="-0.01em"
             lineHeight={1.6}
-            maxW={{base: '70%', sm: '60%', md: '42%', lg: '22%', xl: '18%'}}
+            w={{base: '70%', sm: '60%', md: '42%', lg: '22%', xl: '18%'}}
             alignSelf={{base: 'end', lg: 'start'}}
             py={6}
           >
@@ -58,7 +58,7 @@ export default function Overview() {
               fontSize={{base: 'xs', lg: 'sm'}}
               pr="2"
             >
-              Overview
+              Quick Overview
             </Text>{' '}
             <Text
               as="span"
@@ -67,8 +67,7 @@ export default function Overview() {
               textColor="brand.textLightGray"
             >
               I'm kevin Aguilar, a 20 year old Fullstack developer based in
-              Nicaragua focused on building modern and interactive apps and
-              robust services.
+              Nicaragua focused on building modern and interactive apps.
             </Text>
           </Box>
         </Flex>

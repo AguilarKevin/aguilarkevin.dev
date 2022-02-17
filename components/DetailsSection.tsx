@@ -3,7 +3,7 @@ import PageSection from './PageSection'
 
 interface DetailsSectionProps extends BoxProps {
   title: string
-  description: string
+  description: string | JSX.Element
 }
 
 export default function DetailsSection({

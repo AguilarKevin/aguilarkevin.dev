@@ -1,4 +1,5 @@
-import {Button, Flex, Stack, Text} from '@chakra-ui/react'
+import {Button, Flex, HStack, Stack, StackDivider, Text} from '@chakra-ui/react'
+import Link from 'next/link'
 import React from 'react'
 
 export default function Navigation() {
@@ -6,6 +7,7 @@ export default function Navigation() {
     <>
       <Flex
         justifyContent="space-between"
+        align="center"
         lineHeight={0.8}
         textTransform="uppercase"
         fontSize={{md: 'sm'}}
@@ -16,19 +18,39 @@ export default function Navigation() {
         px={20}
       >
         <Stack>
-          <Text as="span">From</Text>
-          <Text as="span">Nicaragua</Text>
-        </Stack>
-
-        <Stack>
           <Text as="span">fullstack developer</Text>
-          <Text as="span">associated to Nerdify</Text>
+          <Text as="span">From Nicaragua</Text>
         </Stack>
 
-        <Text as="span">My Blog</Text>
+        <HStack
+          divider={<StackDivider borderColor="gray.50" />}
+          justifyContent="space-between"
+          align="center"
+          gap={6}
+        >
+          <Link href="#">
+            <Text as="span" _hover={{textColor: 'brand.textLightGray'}}>
+              About
+            </Text>
+          </Link>
+
+          <Link href="#">
+            <Text as="span" _hover={{textColor: 'brand.textLightGray'}}>
+              My Blog
+            </Text>
+          </Link>
+
+          <Link href="#">
+            <Text as="span" _hover={{textColor: 'brand.textLightGray'}}>
+              Projects
+            </Text>
+          </Link>
+        </HStack>
+
         <Button
           variant="outline"
           borderRadius={18}
+          role="group"
           _hover={{
             bgColor: 'brand.orange',
             borderColor: 'brand.orange',
@@ -40,7 +62,7 @@ export default function Navigation() {
             textTransform="uppercase"
             fontSize="sm"
             fontWeight={300}
-            _hover={{textColor: 'white'}}
+            _groupHover={{textColor: 'white'}}
           >
             Get in touch
           </Text>
