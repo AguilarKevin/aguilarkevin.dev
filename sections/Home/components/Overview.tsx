@@ -66,7 +66,7 @@ export default function Overview() {
               fontSize={{base: 'lg', lg: 'xl'}}
               textColor="brand.textLightGray"
             >
-              I'm kevin Aguilar, a 20 year old Fullstack developer based in
+              I&apos;m kevin Aguilar, a 20 year old Fullstack developer based in
               Nicaragua focused on building modern and interactive apps.
             </Text>
           </Box>
