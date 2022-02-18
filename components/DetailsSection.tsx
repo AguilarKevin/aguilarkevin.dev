@@ -9,7 +9,6 @@ interface DetailsSectionProps extends BoxProps {
 export default function DetailsSection({
   title,
   description,
-  ...props
 }: DetailsSectionProps) {
   return (
     <PageSection

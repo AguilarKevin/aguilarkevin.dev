@@ -6,9 +6,9 @@ export default function Skills() {
       title="tech stack"
       description={
         <>
-          Recently i’ve been working with <strong>React</strong>,{' '}
+          Recently i&apos;ve been working with <strong>React</strong>,{' '}
           <strong>TypeScript</strong>, <strong>GraphQL</strong> and{' '}
-          <strong>Laravel</strong>, and I'm learning more about mobile
+          <strong>Laravel</strong>, and I&apos;m learning more about mobile
           development with Kotlin with Jetpack Compose.
         </>
       }
