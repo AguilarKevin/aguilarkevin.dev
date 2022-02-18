@@ -2,7 +2,7 @@ import {Flex, Text, TextProps} from '@chakra-ui/react'
 import {v4 as uuidv4} from 'uuid'
 
 interface BigTextProps extends TextProps {
-  text: String
+  text: string
 }
 
 export default function BigText({text, ...props}: BigTextProps) {
