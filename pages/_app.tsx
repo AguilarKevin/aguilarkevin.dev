@@ -1,36 +1,13 @@
-import '../styles/globals.css'
-import '../styles/tailwind.css'
-import {AppProps} from 'next/app'
-import {DefaultSeo} from 'next-seo'
-import {RelayEnvironmentProvider} from 'react-relay/hooks'
-import {getInitialPreloadedQuery, getRelayProps} from 'relay-nextjs/app'
-import {getClientEnvironment} from 'relay/clientEnvironment'
-import SiteLayout from 'components/SiteLayout/SiteLayout'
+import '../styles/global.css'
+import {SiteLayout} from '@components/mod'
+import type {AppProps} from 'next/app'
 
-const clientEnv = getClientEnvironment()
-const initialPreloadedQuery = getInitialPreloadedQuery({
-  createClientEnvironment: () => getClientEnvironment()!,
-})
-
-export default function App({Component, pageProps}: AppProps) {
-  const relayProps = getRelayProps(pageProps, initialPreloadedQuery)
-  const env = relayProps.preloadedQuery?.environment ?? clientEnv!
-
+function MyApp({Component, pageProps}: AppProps) {
   return (
-    <>
-      <DefaultSeo
-        title="AguilarKevin"
-        twitter={{
-          cardType: 'summary_large_image',
-          handle: '@_aguilarkevin_',
-          site: '@_aguilarkevin_',
-        }}
-      />
-      <RelayEnvironmentProvider environment={env}>
-        <SiteLayout>
-          <Component {...pageProps} {...relayProps} />
-        </SiteLayout>
-      </RelayEnvironmentProvider>
-    </>
+    <SiteLayout>
+      <Component {...pageProps} />
+    </SiteLayout>
   )
 }
+
+export default MyApp

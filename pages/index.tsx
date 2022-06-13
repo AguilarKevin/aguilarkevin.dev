@@ -1,13 +1,8 @@
-import dynamic from 'next/dynamic'
+import type {NextPage} from 'next'
+import Home from 'sections/Home/Home'
 
-// import Home from '../sections/Home/Home'
-
-const SiteUnderConstruction = dynamic(
-  () => import('sections/SiteUnderConstruction'),
-  {ssr: false}
-)
-
-export default function HomePage() {
-  // return <Home />
-  return <SiteUnderConstruction />
+const HomePage: NextPage = () => {
+  return <Home />
 }
+
+export default HomePage

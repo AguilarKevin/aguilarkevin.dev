@@ -1,25 +1,25 @@
-import {ReactNode} from 'react'
-
 import {Box, ChakraProvider} from '@chakra-ui/react'
-import theme from '../../theme'
+import {type ReactNode} from 'react'
+import {Header, Footer} from './components/mod'
+
+import theme from '../../themes/site/mod'
+import {ErrorBoundary, OverlayManager} from '@components/mod'
 
 interface SiteLayoutProps {
   children: ReactNode
 }
 
-function SiteLayout({children}: SiteLayoutProps) {
+export function SiteLayout({children}: SiteLayoutProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Box
-        as="div"
-        bg="linear-gradient(to bottom, #090401 50%,#4B1D06 100%);"
-        minH="h-screen"
-        h="max-content"
-      >
+      <Header />
+      <Box as="main" minHeight="calc(100vh - 296px)">
         {children}
       </Box>
+      <Footer />
+      <ErrorBoundary FallbackComponent={() => null}>
+        <OverlayManager />
+      </ErrorBoundary>
     </ChakraProvider>
   )
 }
-
-export default SiteLayout
