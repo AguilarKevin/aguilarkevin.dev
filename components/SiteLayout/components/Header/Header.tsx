@@ -52,7 +52,7 @@ export default function Header() {
       textColor="white"
     >
       <Text fontWeight="extrabold" fontSize="2xl" letterSpacing="tighter">
-        AguilarKevin
+        AguilarKevin &nbsp;&nbsp;&nbsp; 🚀
       </Text>
       <Show above="lg">
         <Navigation currentPath={router.asPath} links={navLinks} />
