@@ -3,6 +3,7 @@ import {type ReactNode} from 'react'
 import {Header, Footer} from './components/mod'
 
 import theme from '../../themes/site/mod'
+import {ErrorBoundary, OverlayManager} from '@components/mod'
 
 interface SiteLayoutProps {
   children: ReactNode
@@ -11,11 +12,14 @@ interface SiteLayoutProps {
 export function SiteLayout({children}: SiteLayoutProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Box width="100%">
-        <Header />
+      <Header />
+      <Box as="main" minHeight="calc(100vh - 296px)">
         {children}
-        <Footer />
       </Box>
+      <Footer />
+      <ErrorBoundary FallbackComponent={() => null}>
+        <OverlayManager />
+      </ErrorBoundary>
     </ChakraProvider>
   )
 }

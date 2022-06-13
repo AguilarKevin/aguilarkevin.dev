@@ -8,8 +8,9 @@ export default function Footer() {
       alignItems="center"
       justifyContent="space-between"
       marginInline="auto"
-      maxWidth="container.xl"
+      maxWidth="container.2xl"
       paddingBlock="10"
+      paddingInline="4"
       textColor="white"
     >
       <Stack fontWeight="500" letterSpacing="tight" spacing="1">
