@@ -14,8 +14,6 @@ export function AnimatedText({items}: AnimatedTextProps) {
       setCurrentIndex(currentIndex >= items.length - 1 ? 0 : currentIndex + 1)
     }, 2500)
 
-    
-
     return () => clearInterval(interval)
   }, [currentIndex])
 

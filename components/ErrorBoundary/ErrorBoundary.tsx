@@ -16,7 +16,6 @@ export function ErrorBoundary({
   ...props
 }: ErrorBoundaryProps) {
   const onError = useCallback((error: Error) => {
-    
     // captureException(error)
   }, [])
 
